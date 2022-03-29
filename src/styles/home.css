@@ -1,0 +1,30 @@
+.cuadrodecartas{
+    margin: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow-x: scroll;
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 10px;
+    scrollbar-color: red blue;
+    margin: 50px;
+    margin-top: 10px;
+}
+
+.cuadrodecartas::-webkit-scrollbar-thumb{
+    background: blue;
+}
+
+.cartas{
+    margin: 10px;
+    min-width: 20rem;
+    scrollbar-color: red blue;
+}
+
+.kanto{
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-style:inherit;
+    font-weight: 800;
+}
