@@ -18,10 +18,21 @@ margin-right: 10px;
     width: 500px;
     height: 500px;
    
-    border-radius: 100%;
+    border-style: 100%;
     background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.imagenn{
+    height: 50px;
+
+}
+.botonvolver{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+
 }
