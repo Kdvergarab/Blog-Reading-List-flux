@@ -19,7 +19,7 @@ margin-right: 10px;
     height: 500px;
    
     border-style: 100%;
-    background-color: blue;
+    background-image: linear-gradient(180deg, black, blue, transparent);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,10 +29,12 @@ margin-right: 10px;
     height: 50px;
 
 }
+.botonvolver1{
+    background-image: linear-gradient(180deg, black, transparent);
+}
 .botonvolver{
     display: flex;
     justify-content: center;
     text-align: center;
     margin: 50px;
-
 }

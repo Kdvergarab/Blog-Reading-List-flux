@@ -28,7 +28,7 @@ export const Single = props => {
 
 </div>
 			<Link to="/" className="botonvolver" >
-				<span className="btn btn-primary btn-lg botonvolver" href="#" role="button">
+				<span className="btn btn-primary btn-lg botonvolver1" href="#" role="button">
 					Volver
 				</span>
 			</Link>

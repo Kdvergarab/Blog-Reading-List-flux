@@ -17,7 +17,9 @@ export const CartaPokemon = () => {
             bulk of the card's content.
           </Card.Text>
           <div className="d-flex">
+            <Link to="/single/0">
           <Button className="boton">Learn more!</Button>
+          </Link>
           <Button className="botonpoke"> 
 <img className="pokeball"  
           src="https://jenessa-reika.ca/wp-content/uploads/2020/04/pokemon6.png"

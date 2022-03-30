@@ -36,10 +36,10 @@
 }
 .boton{
     min-width: 120px;
-    background-color: rgb(18, 18, 161);
+    background-image: linear-gradient(180deg, black, transparent);
 }
 .botonpoke{
     border-radius: 200px;
-    background-color: rgb(18, 18, 161);
+    background-image: linear-gradient(180deg, black, transparent);
 
 }
