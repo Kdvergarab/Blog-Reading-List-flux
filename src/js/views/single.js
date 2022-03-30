@@ -2,19 +2,34 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/single.css";
+import { Button, Card } from "react-bootstrap";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+
+<div className="todo">
+<div className="cartass">
+        <img className="imagen"
+          variant="top"
+          src="https://nintendo.pe/wp-content/uploads/2018/05/f51d08be05919290355ac004cdd5c2d6.png"
+        />
+      
+<div className="descripcion">
+	<h1>Nombre del pokemon</h1>
+	<p>clasificaciones</p>
+	<p>tipo de agua</p>
+</div>
 
 			<hr className="my-4" />
 
+
+</div>
 			<Link to="/">
 				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
+					Volver
 				</span>
 			</Link>
 		</div>
