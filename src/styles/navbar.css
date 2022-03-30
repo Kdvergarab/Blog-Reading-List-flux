@@ -10,3 +10,12 @@ button{
 .header{
     background-color: rgb(255, 24, 24);
 }
+.botonf{
+    background-image: linear-gradient(180deg, black, transparent);
+}
+.imagenn1{
+    width: 50%;
+}
+.imagenn2{
+    width: 50%;
+}
