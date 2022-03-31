@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			pokemones: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -20,9 +21,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+				const store = getStore();
+				fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
+					.then((e) => {
+						return e.json();
+					}).then((e) => {
+						e.results.map((pokemon) => {
+							fetch(pokemon.url).then((ex) => {
+								return ex.json()
+							}).then((ex) => {
+								setStore({ pokemones: [...store.pokemones, ex] });
+							})
+						});
+					});
 			},
 			changeColor: (index, color) => {
 				//get the store
@@ -35,8 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return elm;
 				});
 
-				//reset the global store
-				setStore({ demo: demo });
+
 			}
 		}
 	};

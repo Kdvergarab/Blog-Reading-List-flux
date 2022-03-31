@@ -1,6 +1,15 @@
 .imagenn1{
     width: 50%;
-}
-.imagenn2{
+    position: relative;
+    bottom: 20px;
+ }
+
+.imagenn2 {
     width: 50%;
+}
+
+.footer{
+    height: 18px;
+    position: fixed;
+    bottom: 0;
 }

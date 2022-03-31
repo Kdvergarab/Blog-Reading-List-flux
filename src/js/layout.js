@@ -35,9 +35,9 @@ const Layout = () => {
 							<h1>Not foundsacscsec!</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
+					<Footer />
 		</div>
 	);
 };
