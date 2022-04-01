@@ -11,26 +11,21 @@ export const Home = () => {
     <>
     <div className="abuelo">
     <div className="cuadrodecartas">
-      <div className="kanto">Pokedex Kanto</div>
-      <div className="d-flex">
-      {store.pokemones.map((e, i)=>{
-        return (
-          <CartaPokemon nombre={e.name} imagen={e.sprites.other.dream_world.front_default} tipo={e.types}/>
-        )
-      })}   
-    </div>
- {/* {store.pokemones.filter((e) => e.name === 'pikachu').map((e) => {
-  return (
-    <h1>{e.name}</h1>
-  )})}   */}
-    </div>
-  </div>
-  <div className="abuelo">
-    <div className="cuadrodecartas">
-      <div className="kanto">Pokedex Kanto</div>
+      <div className="kanto">Pokemones Estilo Fuego</div>
       <div className="d-flex">
       {store.pokemones.filter((e, i)=>{
-        console.log(e,"kim");
+        return e.types[0].type.name === "fire"
+      }).map((e) =>{
+        return <CartaPokemon nombre={e.name} imagen={e.sprites.other.dream_world.front_default} tipo={e.types}/>
+      })   } 
+      </div>
+      </div> 
+      </div>
+  <div className="abuelo">
+    <div className="cuadrodecartas">
+      <div className="kanto">Pokemones Estilo Hierva</div>
+      <div className="d-flex">
+      {store.pokemones.filter((e, i)=>{
         return e.types[0].type.name === "grass"
       }).map((e) =>{
         return <CartaPokemon nombre={e.name} imagen={e.sprites.other.dream_world.front_default} tipo={e.types}/>
