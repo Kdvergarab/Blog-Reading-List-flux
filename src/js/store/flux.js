@@ -2,24 +2,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			pokemones: [],
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			pokemonesFavoritos: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
+			// exampleFunction: () => {
+			// 	getActions().changeColor(0, "green");
+			// },
 			loadSomeData: () => {
 				const store = getStore();
 				fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
@@ -35,19 +24,49 @@ const getState = ({ getStore, getActions, setStore }) => {
 						});
 					});
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			agregarFavoritos: (id) => {
+				const repiteFavorito = getStore().pokemonesFavoritos.find((elem) => {
 
+					return elem.id === id 
+				})
+			if (repiteFavorito === undefined){
 
+				const pokemonFavorito = getStore().pokemones.find( (el) => { 
+					
+					return el.id === id
+
+				} )
+			
+				setStore({ pokemonesFavoritos: [...getStore().pokemonesFavoritos, pokemonFavorito] })
 			}
+		},
+
+			eliminarFavorito: (index) => {
+				let nuevaLista = [...getStore().pokemonesFavoritos]
+				nuevaLista.splice(index, 1);
+				
+				setStore({ pokemonesFavoritos: nuevaLista})
+			}
+
+
+
+
+
+
+			// changeColor: (index, color) => {
+			// 	//get the store
+			// 	const store = getStore();
+
+			// 	//we have to loop the entire demo array to look for the respective index
+			// 	//and change its color
+			// 	const demo = store.demo.map((elm, i) => {
+			// 		if (i === index) elm.background = color;
+			// 		return elm;
+			// 	});
+
+
+			// }
 		}
 	};
 };

@@ -1,0 +1,11 @@
+.imagenfav{
+    height: 50px;
+    width: 50px;
+
+}
+.cajas{
+   background-color: aqua;
+}
+.cajita{
+    display: flex;
+    align-items: flex-end;}

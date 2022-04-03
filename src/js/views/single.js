@@ -12,7 +12,19 @@ export const Single = props => {
 <>
 		{store.pokemones.map((e) =>{
 			if (e.id.toString() === params.theid) {
-				console.log(e);
+			let color = "gray"
+			if (e.types[0].type.name === "fire") {
+				color = "red"
+			}
+			else if (e.types[0].type.name === "grass"){
+				color = "green"
+			}
+			else if (e.types[0].type.name === "poison" ){
+				color = "rebeccapurple"
+			}
+			else if (e.types[0].type.name === "water") {
+				color = "aqua"
+			}
 				return (
 					<div className="todo">
 
@@ -22,10 +34,12 @@ export const Single = props => {
 							src={e.sprites.other.dream_world.front_default}
 						/>
 		
-						<div className="descripcion">
-							<h1>{e.name}</h1>
+						<div className={`descripcion ${color}`}>
+							<h1>{e.name.toUpperCase()}</h1>
+							<br/>
 							<p>Este pokemon mide {e.height}0 CM y pesa aproximadamente {e.weight}0 gramos </p>
-							<p> Este pokemon es de tipo {e.types[0].type.name}</p>
+							<br/>
+							<p> Este pokemon es de tipo {e.types[0].type.name.toUpperCase()}</p>
 						</div>
 		
 						<hr className="my-4" />
