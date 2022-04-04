@@ -32,6 +32,7 @@ export const Home = () => {
       })   }   
     </div>
     </div>
+    </div>
     <div className="abuelo">
     <div className="cuadrodecartas">
       <div className="kanto">Pokemones Estilo Veneno</div>
@@ -43,8 +44,8 @@ export const Home = () => {
       })   }   
     </div>
     </div>
-  </div>
     </div>
+
     <div className="abuelo">
     <div className="cuadrodecartas">
       <div className="kanto">Pokemones Estilo Agua</div>

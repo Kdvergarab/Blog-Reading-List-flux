@@ -8,18 +8,18 @@ export const CartaPokemon = ({ nombre, imagen, tipo, id}) => {
   const { store, actions } = useContext(Context);
 	return (
 <Card className="cartas" >
-        <Card.Img
+        <Card.Img className="imagenCarta"
           variant="top"
           src={imagen}
         />
         <Card.Body>
-          <Card.Title>{nombre.toUpperCase()}</Card.Title>
+          <Card.Title><h1>{nombre.toUpperCase()}</h1></Card.Title>
           <Card.Text>
            Este pokemon es de tipo "{tipo.map((e, i) => {
              return e.type.name.toUpperCase()
            })}"
           </Card.Text>
-          <div className="d-flex">
+          <div className="d-flex align-items-center">
             <Link to={"/single/" + id}>
           <Button className="boton">Learn more!</Button>
           </Link>

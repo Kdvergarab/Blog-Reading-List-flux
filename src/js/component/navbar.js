@@ -14,7 +14,7 @@ export const Navbar = () => {
 				</span>
 			</Link>
 			<div className="ml-auto botonf">
-		    <NavDropdown title="" id="nav-dropdown">
+		    <NavDropdown title="" id="nav-dropdown" className="botonfavoritos">
         <NavDropdown.Item eventKey="4.1">
 			<Fav />
 		</NavDropdown.Item>

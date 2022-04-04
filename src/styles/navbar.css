@@ -18,6 +18,8 @@ button{
    width: 53px;
    height: 52px;
    padding: none;
+   background-repeat: no-repeat;
+   background-color: rgba(240, 248, 255, 0);
 }
 
 .imagenn1{
@@ -26,4 +28,11 @@ button{
 .imagenn2{
     width: 50%;
  
+}
+.botonfavoritos{
+    color: rgba(0, 0, 0, 0.12);
+    background-repeat: no-repeat;
+}
+#nav-dropdown::after{
+    visibility: hidden;
 }
