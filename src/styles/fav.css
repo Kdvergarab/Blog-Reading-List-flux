@@ -1,0 +1,46 @@
+.imagenfav {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.cajas {
+    background-image: linear-gradient(180deg, rgba(198, 236, 30, 0.565), rgba(3, 3, 191, 0.784));
+    width: 260px;
+    margin: 0px;
+    padding: 0%;
+    color: white
+}
+
+.cajita {
+    display: flex;
+    align-items: flex-end;
+    margin: 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.cerrar {
+    background-color: rgba(0, 0, 255, 0);
+    height: 20px;
+    cursor: pointer;
+    color: rgb(4, 4, 4);
+    margin: 10px;
+}
+.dropdown-menu{
+    margin: 0;
+    padding: 0;
+}
+.dropdown-item{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    color: rgb(1, 1, 5);
+    margin: 15px;
+
+}
+.letra{
+    text-decoration: none;
+}

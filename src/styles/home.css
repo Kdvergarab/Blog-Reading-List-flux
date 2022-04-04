@@ -19,6 +19,9 @@
     margin: 10px;
     min-width: 20rem;
     scrollbar-color: red blue;
+    border: 1px solid;
+  
+    box-shadow: 5px 5px 8px 5px #1e1d1d7f;
 }
 
 .kanto{
@@ -42,4 +45,13 @@
     border-radius: 200px;
     background-image: linear-gradient(180deg, black, transparent);
 
+}
+.abuelo{
+    margin: 50px;
+}
+.imagenCarta{
+    background-image: linear-gradient(180deg, rgba(198, 236, 30, 0.802), rgba(21, 21, 188, 0.684));
+    height: 300px;
+    border-bottom: 1px solid black;
+    filter: drop-shadow(5px 5px 5px #222);
 }
